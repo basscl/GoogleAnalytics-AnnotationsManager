@@ -29,7 +29,9 @@
                 return false;
             }
             localStorage.setItem('annotations', JSON.stringify(annotationsArray));
-            $('#AnnotationManagerWrapper').html(' |&nbsp; ' + annotationsArray.length + ' annotations are into localstorage.');
+            //$('#AnnotationManagerWrapper').html(' |&nbsp; ' + annotationsArray.length + ' annotations are into localstorage.');
+            $('#AnnotationManagerWrapper').remove();
+            displayLinks();
         };
 
         dumpAnnotationsProcess();
