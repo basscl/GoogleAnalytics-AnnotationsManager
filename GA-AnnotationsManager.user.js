@@ -172,8 +172,8 @@
     };
 
     $(document).bind('DOMNodeInserted', function(event) {
-        if (event.target.id.indexOf('AnnotationDrawer') >= 0 || /* Init */
-            event.target.className.indexOf('Vp editable') >= 0) /* New element */ {
+        if (event.target.id && event.target.id.indexOf('AnnotationDrawer') >= 0 || /* Init */
+            event.target.className && (typeof event.target.className == 'string') && event.target.className.indexOf('Vp editable') >= 0) /* New element */ {
             displayLinks();
         }
     });
